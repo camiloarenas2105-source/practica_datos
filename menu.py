@@ -39,10 +39,9 @@ def menu():
         elif opcion == "4":
             buscar_por_tarjeta()
 
-
-
-
-      
+        elif opcion == "5":
+            print("Saliendo...")
+            break
 
 
 

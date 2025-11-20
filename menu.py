@@ -36,6 +36,9 @@ def menu():
         elif opcion == "3":
             mostrar_todas()
 
+        elif opcion == "4":
+            buscar_por_tarjeta()
+
 
 
 

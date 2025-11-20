@@ -33,6 +33,11 @@ def menu():
         elif opcion == "2":
             mostrar_impares()
 
+        elif opcion == "3":
+            mostrar_todas()
+
+
+
 
       
 

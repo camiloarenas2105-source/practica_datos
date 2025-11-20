@@ -30,6 +30,10 @@ def menu():
             except Exception as e:
                 print("Error:", e)
 
+        elif opcion == "2":
+            mostrar_impares()
+
+
       
 
 

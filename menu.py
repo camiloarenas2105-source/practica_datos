@@ -1,6 +1,6 @@
 from Persona import Persona
 from datos import agregar_persona
-from listapersonas import mostrar_impares, mostrar_todas, buscar_por_tarjeta
+from listapersonas import mostrar_impares, mostrar_todas, buscar_por_tarjeta, eliminar,editar
 
 def menu():
     while True:
@@ -10,7 +10,9 @@ def menu():
 2. Consultar personas IMPAR
 3. Consultar TODAS
 4. Buscar por número de tarjeta
-5. Salir
+5. Editar persona
+6. Eliminar persona
+7. Salir
 """)
 
         opcion = input("Seleccione una opción: ")
@@ -38,13 +40,17 @@ def menu():
 
         elif opcion == "4":
             buscar_por_tarjeta()
-
+            
         elif opcion == "5":
-            print("Saliendo...")
+            editar()
+
+        elif opcion == "6":
+            eliminar()
             break
 
-
-
+        elif opcion == "7":
+            print("Saliendo del programa.")
+            break
         else:
             print("Opción inválida.\n")
 

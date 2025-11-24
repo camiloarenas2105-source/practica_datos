@@ -21,6 +21,21 @@ def consultar_por_tarjeta(num_tarjeta: int):
     return personas_impar.get(num_tarjeta, None)
 
 
+def eliminar_persona(num_tarjeta: int):
+    if num_tarjeta in personas_impar:
+        del personas_impar[num_tarjeta]
+        return "Persona eliminada correctamente."
+    return "No existe una persona con esa tarjeta IMPAR."
+
+def editar_persona(num_tarjeta: int, nueva_persona: Persona):
+    if num_tarjeta in personas_impar:
+        personas_impar[num_tarjeta] = nueva_persona
+        return "Persona editada correctamente."
+    return "No existe una persona con esa tarjeta IMPAR."
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-from datos import consultar_impar, consultar_todas, consultar_por_tarjeta
+from datos import Persona,consultar_impar, consultar_todas, consultar_por_tarjeta,eliminar_persona, editar_persona
 
 def mostrar_impares():
     datos = consultar_impar()
@@ -24,6 +24,29 @@ def buscar_por_tarjeta():
             print("\nPersona encontrada:\n", persona)
         else:
             print("\nNo existe una persona con esa tarjeta.\n")
+    except ValueError:
+        print("Número inválido.")
+
+def eliminar():
+    try:
+        numero = int(input("Ingrese el número de tarjeta de la persona a eliminar: "))
+        mensaje = eliminar_persona(numero)
+        print("\n→", mensaje, "\n")
+    except ValueError:
+        print("Número inválido.")
+        
+def editar():
+    try:
+        numero = int(input("Ingrese el número de tarjeta de la persona a editar: "))
+        nombre = input("Nuevo Nombre: ")
+        edad = int(input("Nueva Edad: "))
+        correo = input("Nuevo Correo: ")
+        ciudad = input("Nueva Ciudad: ")
+        tarjeta = int(input("Nuevo Número de tarjeta (IMPAR): "))
+
+        nueva_persona = Persona(nombre, edad, correo, ciudad, tarjeta)
+        mensaje = editar_persona(numero, nueva_persona)
+        print("\n→", mensaje, "\n")
     except ValueError:
         print("Número inválido.")
 
